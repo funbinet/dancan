@@ -671,15 +671,18 @@ body.light-theme {
 
 /*=============== SERVICES ===============*/
 .services__container {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  row-gap: 2rem;
   padding-top: 1rem;
 }
 
 .services__card {
   background-color: var(--container-color);
-  padding: 3rem 1.5rem 1.5em;
+  padding: 1.5rem;
   border-radius: 1.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
 }
 
 .services__card:hover {
@@ -690,7 +693,8 @@ body.light-theme {
 
 .services__title {
   font-size: var(--h3-font-size);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .services__img {
@@ -705,6 +709,8 @@ body.light-theme {
   color: var(--text-color-light);
   font-size: var(--small-font-size);
   margin-bottom: 1.25rem;
+  flex: 1;
+  overflow: hidden;
 }
 
 .services__button {
@@ -1233,8 +1239,7 @@ body.light-theme {
   }
 
   .services__container {
-    grid-template-columns: 145px;
-    justify-content: center;
+    row-gap: 2rem;
   }
 
   .work__item {
@@ -1299,8 +1304,12 @@ body.light-theme {
   }
 
   .services__container {
-    grid-template-columns: repeat(3, 177px);
-    justify-content: center;
+    row-gap: 2rem;
+  }
+
+  .services__card {
+    padding: 1.5rem;
+    min-height: 380px;
   }
 
   .services__modal-content {
@@ -1446,12 +1455,12 @@ body.light-theme {
   }
 
   .services__container {
-    grid-template-columns: repeat(3, 300px);
-    column-gap: 2rem;
+    row-gap: 2rem;
   }
 
   .services__card {
-    padding: 5rem 2rem 1.5rem;
+    padding: 1.5rem;
+    min-height: 380px;
   }
 
   .work__container {
