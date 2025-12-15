@@ -95,6 +95,7 @@
 /* Buttons: look like commands */
 button,
 .button {
+  text-decoration: none;
   background: transparent;
   border: 1px solid var(--hacker-green);
   color: var(--hacker-green);
@@ -103,6 +104,7 @@ button,
 
 button:hover,
 .button:hover {
+  text-decoration: none;
   background-color: rgba(0,250,0,0.08);
   box-shadow: 0 0 12px var(--glow-color);
   transform: translateY(-2px);
