@@ -1,5 +1,5 @@
 # Environment and configuration
-.env
+.env.example
 config.php
 
 # Composer vendor dir
