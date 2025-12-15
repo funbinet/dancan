@@ -1,0 +1,12 @@
+{
+  "name": "laume-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio site with serverless contact endpoint using Resend",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "resend": "^1.0.0"
+  }
+}

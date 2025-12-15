@@ -1,0 +1,13 @@
+# Environment and configuration
+.env
+config.php
+
+# Composer vendor dir
+/vendor/
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Logs
+*.log
