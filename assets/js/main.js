@@ -221,17 +221,10 @@ sr.reveal(`.home__social, .home__scroll`, {
   origin: "bottom",
 });
 
-sr.reveal(`.about__img`, {
+sr.reveal(`.about__data, .about__info, .about__description, .about__button-contact`, {
   delay: 100,
-  origin: "left",
-  scale: 0.9,
-  distance: "30px",
-});
-
-sr.reveal(`.about__data, .about__description, .about__button-contact`, {
-  delay: 100,
-  scale: 0.9,
-  origin: "right",
+  scale: 0.95,
+  origin: "bottom",
   distance: "30px",
 });
 
