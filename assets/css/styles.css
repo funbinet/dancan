@@ -726,10 +726,19 @@ body.light-theme {
 
 .services__img {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
+  height: 170px;
+  object-fit: contain;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
+  background: rgba(0, 250, 0, 0.03);
+  border: 1px solid rgba(0, 250, 0, 0.15);
+  padding: 0.5rem;
+  transition: border-color var(--trans-mid) ease, background var(--trans-mid) ease;
+}
+
+.skills__content:hover .services__img {
+  border-color: var(--hacker-green);
+  background: rgba(0, 250, 0, 0.08);
 }
 
 .services__card-desc {
@@ -849,8 +858,17 @@ body.light-theme {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem 0.75rem;
+  gap: 0.35rem 0.5rem;
   margin-bottom: 2rem;
+  background-color: var(--container-color);
+  padding: 0.35rem 0.65rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(0, 250, 0, 0.18);
+  width: max-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .work__item {
@@ -858,7 +876,7 @@ body.light-theme {
   color: var(--title-color);
   padding: 0.35rem 0.85rem;
   font-weight: var(--font-medium);
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   border: 1px solid transparent;
   transition: all var(--trans-fast) ease;
 }
@@ -868,13 +886,21 @@ body.light-theme {
   color: var(--hacker-green);
 }
 
+.active-work {
+  background-color: var(--hacker-green);
+  color: #000 !important;
+  font-weight: 600;
+}
+
 .work__card {
   background-color: var(--container-color);
   padding: 1.25rem;
   border-radius: 0.75rem;
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   height: 100%;
+  box-sizing: border-box;
+  width: 100%;
   transition: box-shadow var(--trans-mid) ease, border-color var(--trans-mid) ease, transform var(--trans-mid) ease;
 }
 
@@ -883,7 +909,16 @@ body.light-theme {
   margin-bottom: 1rem;
   width: 100%;
   height: 170px;
-  object-fit: cover;
+  object-fit: contain;
+  background: rgba(0, 250, 0, 0.03);
+  border: 1px solid rgba(0, 250, 0, 0.15);
+  padding: 0.5rem;
+  transition: border-color var(--trans-mid) ease, background var(--trans-mid) ease;
+}
+
+.work__card:hover .work__img {
+  border-color: var(--hacker-green);
+  background: rgba(0, 250, 0, 0.08);
 }
 
 .work__title {
@@ -1267,7 +1302,7 @@ body.light-theme {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 600px) {
   .nav__menu {
     padding: 1rem 1rem;
   }
@@ -1282,7 +1317,14 @@ body.light-theme {
 
   .skills__container,
   .work__container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    width: 100%;
+  }
+
+  .work__card.mix {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
   }
 }
 
